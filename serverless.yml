@@ -1,0 +1,14 @@
+org: radnier
+app: api-file-loader
+service: api-file-loader
+frameworkVersion: '3'
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+
+functions:
+  api:
+    handler: index.handler
+    events:
+      - httpApi: '*'
